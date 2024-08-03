@@ -1,0 +1,272 @@
+:root {
+  --colorPrincipal: #0a0e23;
+  --colorNegro: #000;
+  --colorBlanco: #fff;
+  --fuenteTitulo: "Raleway", sans-serif;
+  --fuenteParrafo: "Quicksand", sans-serif;
+}
+
+/* Globales */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 2rem;
+  font-family: var(--fuenteParrafo);
+  color: var(--colorNegro);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.contenedor {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: var(--black-color);
+  font-family: var(--fuenteTitulo);
+  font-weight: 800;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  font-family: var(--fuenteParrafo);
+  font-weight: 600;
+}
+
+/* ? Cabecera */
+.cabecera {
+  background-image: url(../img/hero-image.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60% 20%;
+  height: 70vh;
+}
+
+.cabecera-background {
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.cabecera-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+
+.cabecera-menu-imagen {
+  width: 6rem;
+}
+
+.cabecera-menu-navegacion {
+  display: flex;
+  gap: 5rem;
+}
+
+.cabecera-menu-navegacion a {
+  color: var(--colorBlanco);
+  font-family: var(--fuenteParrafo);
+  font-weight: 700;
+}
+
+.cabecera-titulo {
+  color: var(--colorBlanco);
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 10rem;
+  margin-top: 12rem;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .cabecera {
+    height: 35rem;
+  }
+
+  .cabecera-menu-navegacion a {
+    font-size: 1.15rem;
+  }
+
+  .cabecera-titulo {
+    font-size: 7rem;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .cabecera-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .cabecera-menu-navegacion {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .cabecera-menu-navegacion a {
+    text-align: center;
+  }
+
+  .cabecera-titulo {
+    font-size: 6rem;
+    margin-top: 5rem;
+  }
+}
+
+/* ? COntenido Principal */
+.contenido-principal {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 5rem;
+}
+
+.seccion-principal {
+  padding-left: 4rem;
+}
+
+.seccion-principal-titulo {
+  text-align: left;
+  margin-bottom: 0rem;
+}
+
+.seccion-principal-subtitulo {
+  text-align: left;
+  font-size: 4rem;
+}
+
+.seccion-principal-subtitulo-2 {
+  text-align: left;
+}
+
+.seccion-principal-boton {
+  border: none;
+  background-color: var(--colorPrincipal);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.seccion-principal-boton a {
+  color: var(--colorBlanco);
+  font-weight: 800;
+  font-family: var(--fuenteParrafo);
+}
+
+.seccion-aside {
+  padding-right: 4rem;
+}
+
+.seccion-aside-titulo {
+  font-size: 3rem;
+  text-align: left;
+  margin-top: 10rem;
+  margin-bottom: 0rem;
+}
+
+.seccion-aside-subtitulo {
+  text-align: left;
+  font-size: 2rem;
+}
+
+.seccion-aside-imagen {
+  width: 30rem;
+}
+
+.seccion-aside-parrafo {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .contenido-principal {
+    display: block;
+  }
+
+  .seccion-principal {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .seccion-principal-parrafo {
+    text-align: justify;
+  }
+
+  .seccion-aside {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .contenido-principal {
+    column-gap: 2rem;
+  }
+
+  .seccion-principal-parrafo {
+    font-size: 1.6rem;
+    text-align: justify;
+  }
+
+    .seccion-aside-imagen {
+    width: 20rem;
+  }
+}
+
+/* ? Footer */
+footer {
+  margin-top: 10rem;
+  background-color: var(--colorPrincipal);
+  height: 25vh;
+}
+
+.contenedor-footer {
+  height: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  footer {
+    height: 35vh;
+  }
+  .contenedor-footer {
+    flex-direction: column;
+  }
+}
